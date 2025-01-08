@@ -10,27 +10,48 @@ jobs:
   generate-blog:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    strategy:
+      matrix:
+        node-version: [18.x]
 
-      - name: Setup Node.js
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
-          cache: 'npm'
+          node-version: ${{ matrix.node-version }}
 
-      - name: Install dependencies
-        run: npm install
+      - name: Create package-lock.json
+        run: npm i --package-lock-only
+
+      - name: Install Dependencies
+        run: |
+          npm ci
+          npm cache clean --force
+        env:
+          CI: true
+
+      - name: Create public directory
+        run: mkdir -p public/images
 
       - name: Generate blog post
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
           UNSPLASH_API_KEY: ${{ secrets.UNSPLASH_API_KEY }}
-        run: node blogGenerator.js
+        run: |
+          echo "Starting blog generation..."
+          node blogGenerator.js
+          echo "Blog generation completed."
 
       - name: Handle potential failures
         if: failure()
         run: |
-          echo "Blog generation failed. Check the logs for details." 
+          echo "Blog generation failed. Check the logs for details."
+          echo "Node version:"
+          node --version
+          echo "NPM version:"
+          npm --version 
