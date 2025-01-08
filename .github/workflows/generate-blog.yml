@@ -2,8 +2,8 @@ name: Generate Blog Posts
 
 on:
   schedule:
-    # Every 2 minutes (for testing)
-    - cron: '*/2 * * * *'
+    # Runs every 4 hours
+    - cron: '0 */4 * * *'
   workflow_dispatch: # Allows manual trigger
 
 jobs:
