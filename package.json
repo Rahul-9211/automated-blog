@@ -1,19 +1,25 @@
 {
   "name": "automated-blog",
   "version": "1.0.0",
-  "description": "",
+  "description": "Automated blog post generator using AI",
   "main": "blogGenerator.js",
   "scripts": {
+    "start": "node blogGenerator.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "blog",
+    "automation",
+    "ai",
+    "content-generation"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@google/generative-ai": "^0.21.0",
-    "axios": "^1.7.9",
-    "dotenv": "^16.4.7",
-    "mongoose": "^8.9.3",
+    "@google/generative-ai": "^0.2.1",
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.5",
+    "mongoose": "^8.2.0",
     "slugify": "^1.6.6"
   }
 }
