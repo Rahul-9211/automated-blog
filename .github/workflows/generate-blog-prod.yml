@@ -1,0 +1,37 @@
+name: Generate Blog Posts Production
+
+on:
+  schedule:
+    # Runs at 00:00, 08:00, and 16:00 UTC
+    - cron: '0 0,8,16 * * *'
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  generate-blog:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate blog post
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          UNSPLASH_API_KEY: ${{ secrets.UNSPLASH_API_KEY }}
+        run: node blogGenerator.js
+
+      - name: Handle potential failures
+        if: failure()
+        run: |
+          echo "Blog generation failed. Check the logs for details."
+          # Add notification or logging logic here 
