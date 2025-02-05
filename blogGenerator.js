@@ -29,13 +29,14 @@ async function generateBlogPost(blogService) {
             todaysTopic.outline.sections
         );
         const blogContent = await aiService.generateContent(prompt);
-
+        //quil content
+        const quilContent = await aiService.quilGeneratedContent(blogContent);
         // Create blog post
         const blog = await blogService.createBlog({
-            title: blogService.extractTitle(blogContent),
-            content: blogContent,
+            title: todaysTopic.name,
+            content: quilContent,
             tags: todaysTopic.tags,
-            featuredImage: imageUrl
+            featuredImage: imageUrl,
         });
 
         console.log('Blog post generated and saved successfully!');

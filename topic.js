@@ -1,6 +1,116 @@
 const topics = [
     {
       id: 1,
+      name: "Should I choose C# (.NET) over JS (ReactS, React Native)?",
+      tags: ["React", "React Native", "C#", "Comparison", "Frontend", "Backend"],
+      outline: {
+        introduction: "Comparing C# and JavaScript for web and mobile development.",
+        sections: [
+          "Overview of C# and .NET",
+          "Overview of JavaScript and its ecosystem",
+          "Strengths of C#",
+          "Strengths of React.js and React Native",
+          "Use cases and industry demand",
+          "Conclusion: Which one to choose?"
+        ]
+      }
+    },
+    {
+      id: 2,
+      name: "Is there a bright future for React JS and React Native?",
+      tags: ["React", "React Native", "Future Trends", "Frontend"],
+      outline: {
+        introduction: "Evaluating the future potential of React.js and React Native.",
+        sections: [
+          "React.js: Current market trends",
+          "React Native: Current market trends",
+          "Adoption by major companies",
+          "Future opportunities in web and mobile development",
+          "Predictions for React.js and React Native",
+          "Conclusion: Bright future or not?"
+        ]
+      }
+    },
+    {
+      id: 3,
+      name: "Is there any way to convert React Native project to React JS?",
+      tags: ["React", "React Native", "Migration", "Frontend"],
+      outline: {
+        introduction: "Discussing the feasibility of converting React Native projects to React.js.",
+        sections: [
+          "Differences between React Native and React.js",
+          "Common components used in both",
+          "Approaches to migration",
+          "Challenges and limitations",
+          "Tools or libraries to assist",
+          "Conclusion: Is it worth the effort?"
+        ]
+      }
+    },
+    {
+      id: 4,
+      name: "Can I learn React Native without JavaScript?",
+      tags: ["React Native", "JavaScript", "Learning Path", "Frontend"],
+      outline: {
+        introduction: "Exploring if JavaScript knowledge is mandatory for React Native.",
+        sections: [
+          "Why JavaScript is essential for React Native",
+          "React Native features requiring JavaScript",
+          "Resources to learn JavaScript basics",
+          "Alternative approaches to learning React Native",
+          "Conclusion: Can you skip JavaScript?"
+        ]
+      }
+    },
+    {
+      id: 5,
+      name: "Can React Native be used for the web?",
+      tags: ["React Native", "Web Development", "Frontend"],
+      outline: {
+        introduction: "Analyzing the use of React Native for web development.",
+        sections: [
+          "Overview of React Native for Web",
+          "How React Native can adapt to web",
+          "Pros and cons of using React Native for Web",
+          "Use cases and examples",
+          "Alternatives to React Native for Web",
+          "Conclusion: Should you use it?"
+        ]
+      }
+    },
+    {
+      id: 6,
+      name: "How was your experience building apps with React Native?",
+      tags: ["React Native", "Mobile Development", "Experience"],
+      outline: {
+        introduction: "Sharing personal experiences of building apps using React Native.",
+        sections: [
+          "Ease of use and development",
+          "Challenges faced during development",
+          "Performance considerations",
+          "Developer tools and ecosystem",
+          "Lessons learned",
+          "Conclusion: Overall experience"
+        ]
+      }
+    },
+    {
+      id: 7,
+      name: "Can we use React Native for web application development?",
+      tags: ["React Native", "Web Applications", "Frontend"],
+      outline: {
+        introduction: "Discussing the feasibility of using React Native for web apps.",
+        sections: [
+          "Overview of React Native and its flexibility",
+          "React Native for Web: Key features",
+          "Advantages and disadvantages",
+          "Real-world use cases",
+          "Conclusion: Is it viable?"
+        ]
+      }
+    },
+    {
+      id: 8,
       name: "Which is better, React or React Native? Why?",
       tags: ["React", "React Native", "Comparison", "Frontend"],
       outline: {
@@ -16,7 +126,7 @@ const topics = [
       }
     },
     {
-      id: 2,
+      id: 9,
       name: "What should I learn first, React JS or React Native?",
       tags: ["React", "React Native", "Learning Path", "Frontend"],
       outline: {
@@ -33,7 +143,7 @@ const topics = [
       }
     },
     {
-      id: 3,
+      id: 10,
       name: "Is ReactS same as React Native?",
       tags: ["React", "React Native", "Clarification", "Frontend"],
       outline: {
@@ -48,7 +158,7 @@ const topics = [
       }
     },
     {
-      id: 4,
+      id: 11,
       name: "Which one is better for the future, React.js or React Native?",
       tags: ["React", "React Native", "Future Trends", "Frontend"],
       outline: {
@@ -64,7 +174,7 @@ const topics = [
       }
     },
     {
-      id: 5,
+        id: 12,
       name: "If I know React.js, is React Native hard to pick up?",
       tags: ["React", "React Native", "Learning Curve", "Frontend"],
       outline: {
@@ -80,7 +190,7 @@ const topics = [
       }
     },
     {
-      id: 6,
+        id: 13,
       name: "Should I learn ReactS before learning React Native?",
       tags: ["React", "React Native", "Learning Path", "Frontend"],
       outline: {
@@ -95,7 +205,7 @@ const topics = [
       }
     },
     {
-      id: 7,
+      id: 14,
       name: "How difficult is React Native for a React Developer?",
       tags: ["React", "React Native", "Difficulty Level", "Frontend"],
       outline: {
@@ -110,7 +220,7 @@ const topics = [
       }
     },
     {
-      id: 8,
+      id: 15,
       name: "Can I learn React Native without React?",
       tags: ["React Native", "Learning Path", "Frontend"],
       outline: {
@@ -125,7 +235,7 @@ const topics = [
       }
     },
     {
-      id: 9,
+        id: 16,
       name: "Should you learn React js and React Native in 2019?",
       tags: ["React", "React Native", "Trends", "Frontend"],
       outline: {
@@ -136,116 +246,6 @@ const topics = [
           "Use cases for both in 2019",
           "Key reasons to learn React and React Native",
           "Future trends based on 2019 learnings"
-        ]
-      }
-    },
-    {
-      id: 10,
-      name: "Should I choose C# (.NET) over JS (ReactS, React Native)?",
-      tags: ["React", "React Native", "C#", "Comparison", "Frontend", "Backend"],
-      outline: {
-        introduction: "Comparing C# and JavaScript for web and mobile development.",
-        sections: [
-          "Overview of C# and .NET",
-          "Overview of JavaScript and its ecosystem",
-          "Strengths of C#",
-          "Strengths of React.js and React Native",
-          "Use cases and industry demand",
-          "Conclusion: Which one to choose?"
-        ]
-      }
-    },
-    {
-      id: 11,
-      name: "Is there a bright future for React JS and React Native?",
-      tags: ["React", "React Native", "Future Trends", "Frontend"],
-      outline: {
-        introduction: "Evaluating the future potential of React.js and React Native.",
-        sections: [
-          "React.js: Current market trends",
-          "React Native: Current market trends",
-          "Adoption by major companies",
-          "Future opportunities in web and mobile development",
-          "Predictions for React.js and React Native",
-          "Conclusion: Bright future or not?"
-        ]
-      }
-    },
-    {
-      id: 12,
-      name: "Is there any way to convert React Native project to React JS?",
-      tags: ["React", "React Native", "Migration", "Frontend"],
-      outline: {
-        introduction: "Discussing the feasibility of converting React Native projects to React.js.",
-        sections: [
-          "Differences between React Native and React.js",
-          "Common components used in both",
-          "Approaches to migration",
-          "Challenges and limitations",
-          "Tools or libraries to assist",
-          "Conclusion: Is it worth the effort?"
-        ]
-      }
-    },
-    {
-      id: 13,
-      name: "Can I learn React Native without JavaScript?",
-      tags: ["React Native", "JavaScript", "Learning Path", "Frontend"],
-      outline: {
-        introduction: "Exploring if JavaScript knowledge is mandatory for React Native.",
-        sections: [
-          "Why JavaScript is essential for React Native",
-          "React Native features requiring JavaScript",
-          "Resources to learn JavaScript basics",
-          "Alternative approaches to learning React Native",
-          "Conclusion: Can you skip JavaScript?"
-        ]
-      }
-    },
-    {
-      id: 14,
-      name: "Can React Native be used for the web?",
-      tags: ["React Native", "Web Development", "Frontend"],
-      outline: {
-        introduction: "Analyzing the use of React Native for web development.",
-        sections: [
-          "Overview of React Native for Web",
-          "How React Native can adapt to web",
-          "Pros and cons of using React Native for Web",
-          "Use cases and examples",
-          "Alternatives to React Native for Web",
-          "Conclusion: Should you use it?"
-        ]
-      }
-    },
-    {
-      id: 15,
-      name: "How was your experience building apps with React Native?",
-      tags: ["React Native", "Mobile Development", "Experience"],
-      outline: {
-        introduction: "Sharing personal experiences of building apps using React Native.",
-        sections: [
-          "Ease of use and development",
-          "Challenges faced during development",
-          "Performance considerations",
-          "Developer tools and ecosystem",
-          "Lessons learned",
-          "Conclusion: Overall experience"
-        ]
-      }
-    },
-    {
-      id: 16,
-      name: "Can we use React Native for web application development?",
-      tags: ["React Native", "Web Applications", "Frontend"],
-      outline: {
-        introduction: "Discussing the feasibility of using React Native for web apps.",
-        sections: [
-          "Overview of React Native and its flexibility",
-          "React Native for Web: Key features",
-          "Advantages and disadvantages",
-          "Real-world use cases",
-          "Conclusion: Is it viable?"
         ]
       }
     },

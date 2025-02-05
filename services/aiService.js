@@ -24,27 +24,25 @@ class AIServiceGoogle {
     generateBlogPrompt(topic, imageUrl, sections) {
         return `Write a detailed technical blog post about ${topic.name} following this specific format:
 
-        1. Start with a catchy title using # (H1 heading)
-        
-        2. Add a featured image using this markdown:
-        ![${topic.name}](${imageUrl})
-        
-        3. Begin with a compelling introduction that:
+
+    
+        Start with Introduction directly no Heading :
+        1. Begin with a compelling introduction that:
            - Hooks the reader
            - Explains why this topic matters
            - Briefly outlines what will be covered
         
-        4. For each main section:
+        2. For each main section:
            - Use ## for section headings
            - Include relevant code examples using \`\`\`javascript if its about coding 
            - Explain concepts with simple analogies
            - Add practical examples
            - Include pros and cons where relevant
         
-        5. Include these specific sections:
+        3. Include these specific sections:
         ${sections.map(section => `   ## ${section}`).join('\n')}
         
-        6. Style guidelines:
+        4. Style guidelines:
            - Write in a conversational tone
            - Use short paragraphs
            - Include bullet points for lists
@@ -52,14 +50,26 @@ class AIServiceGoogle {
            - Use bold for important concepts
            - Add relevant emojis for visual appeal
         
-        7. End with:
+        5. End with:
            - A clear summary
            - Next steps or call to action
            - Related resources
         
-        Make it informative yet easy to understand, similar to popular Medium articles.
+        Make it informative yet easy to understand, similar to popular Medium articles. and dont include heading here start directly with heading "Introduction" 
         Format everything in markdown.`;
     }
+
+    async quilGeneratedContent(content) {
+        try {
+            const model = this.genAI.getGenerativeModel({ model: this.model });
+            const result = await model.generateContent(`quil this ${content} content for blog so it will not behave like AI generated content . Format everything in markdown.`);
+            return result.response.text();
+        } catch (error) {
+            console.error('Error generating content:', error);
+            throw error;
+        }
+    }
+           
 }
 
 module.exports = AIServiceGoogle; 
