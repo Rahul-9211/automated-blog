@@ -55,7 +55,7 @@ class AIServiceGoogle {
            - Next steps or call to action
            - Related resources
         
-        Make it informative yet easy to understand, similar to popular Medium articles. and dont include heading here start directly with heading "Introduction" 
+        Make it informative yet easy to understand, similar to popular Medium articles in between 2000 to 3000 words. and dont include heading here start directly with heading "Introduction" 
         Format everything in markdown.`;
     }
 

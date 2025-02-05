@@ -1,6 +1,6 @@
 # 🤖 AI-Powered Blog Generator
 
-An automated blog post generator that creates high-quality technical content using AI. This project automatically generates and publishes blog posts about React and React Native topics every 4 hours.
+An automated blog post generator that creates high-quality technical content using AI. This project automatically generates and publishes blog posts about React and React Native topics daily.
 
 ## 🌟 Features
 
@@ -8,8 +8,9 @@ An automated blog post generator that creates high-quality technical content usi
 - **Smart Topic Selection**: Rotates through carefully curated React/React Native topics
 - **Image Integration**: Automatically fetches relevant images from Unsplash
 - **MongoDB Storage**: Stores posts with proper schema and slugs
-- **GitHub Actions**: Automated publishing every 4 hours
+- **GitHub Actions**: Automated publishing daily
 - **Markdown Format**: All content is generated in markdown for easy rendering
+- **Content Quality**: Includes a content "quilting" process to enhance naturalness
 
 ## 🛠️ Tech Stack
 
@@ -36,7 +37,7 @@ An automated blog post generator that creates high-quality technical content usi
 
 ### Environment Variables
 
-Create a `.env` file with the following variables:
+Create a `.env` file with:
 
 - `GOOGLE_API_KEY`: Your Google Gemini API key
 - `MONGODB_URI`: Your MongoDB connection string
